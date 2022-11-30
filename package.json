@@ -1,0 +1,23 @@
+{
+  "name": "back-end-development-and-apis",
+  "version": "1.0.0",
+  "description": "> My solutions to the BackEnd Development And APIs Course Projects from freeCodeCamp.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalidmesbah/Back-End-Development-and-APIs.git"
+  },
+  "keywords": [],
+  "author": "Khalid Mesbah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khalidmesbah/Back-End-Development-and-APIs/issues"
+  },
+  "homepage": "https://github.com/khalidmesbah/Back-End-Development-and-APIs#readme"
+}
