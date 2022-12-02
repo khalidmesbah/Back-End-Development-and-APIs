@@ -7,7 +7,7 @@
 ## Completed Projects
 - [x] Timestamp Microservice [Preview](https://boilerplate-project-timestamp.khalidmesbah1.repl.co)
 - [x] Request Header Parser Microservice [Preview](https://boilerplate-project-headerparser.khalidmesbah1.repl.co)
-- [ ] URL Shortener Microservice [Preview]()
+- [x] URL Shortener Microservice [Preview](https://boilerplate-project-urlshortener.khalidmesbah1.repl.co)
 - [ ] Exercise Tracker [Preview]()
 - [ ] File Metadata Microservice [Preview]()
 

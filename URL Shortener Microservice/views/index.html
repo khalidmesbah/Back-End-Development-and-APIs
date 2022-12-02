@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice | freeCodeCamp.org</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+    <h1>URL Shortener Microservice</h1>
+    <h2>Short URL Creation</h2>
+    <p>
+      Example: <code>POST [project_url]/api/shorturl</code> -
+      <code>https://www.google.com</code>
+    </p>
+    <main>
+      <section>
+        <form action="api/shorturl" method="POST">
+          <fieldset>
+            <legend>URL Shortener</legend>
+            <label for="url_input">URL:</label>
+            <input
+              id="url_input"
+              type="text"
+              name="url"
+              placeholder="https://www.freecodecamp.org/"
+            />
+            <input type="submit" value="POST URL" />
+          </fieldset>
+        </form>
+      </section>
+      <h2>Example Usage:</h2>
+      <a
+        href="https://url-shortener-microservice.freecodecamp.rocks/api/shorturl/3"
+      >
+        [this_project_url]/api/shorturl/3
+      </a>
+
+      <h3>Will Redirect to:</h3>
+      <p>https://forum.freecodecamp.org/</p>
+    </main>
+    <footer>
+      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
+    </footer>
+
+    <div class="LImageHighlighter" data-image-id="null" style="display: none">
+      <div class="LImageHighlighter__btn">
+        <div class="LImageHighlighter__highlight">
+          <div class="LImageHighlighter__icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.86955 0.219635L6.69192 4.75749C6.68483 4.76753 6.67978 4.77887 6.67708 4.79085C6.67437 4.80284 6.67406 4.81525 6.67616 4.82736C6.67825 4.83947 6.68272 4.85104 6.6893 4.86142C6.69588 4.8718 6.70444 4.88078 6.7145 4.88785L11.9389 8.54597C11.949 8.55312 11.9604 8.5582 11.9725 8.56091C11.9845 8.56362 11.997 8.56391 12.0092 8.56176C12.0214 8.55961 12.033 8.55507 12.0434 8.54839C12.0538 8.54172 12.0628 8.53304 12.0698 8.52288L15.0655 4.24447C15.662 5.3643 16 6.64267 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C8.64378 0 9.26979 0.0760423 9.86955 0.219635ZM8.8715 10.3427L11.5684 9.13051C11.6171 9.10844 11.6233 9.04224 11.5797 9.01145L6.39991 5.38514C6.38995 5.37824 6.37835 5.37408 6.36628 5.3731C6.3542 5.37212 6.34208 5.37435 6.33114 5.37956C6.3202 5.38477 6.31084 5.39277 6.30399 5.40276C6.29714 5.41276 6.29305 5.42438 6.29213 5.43646L6.07556 8.38482L5.6301 9.01299C5.61972 9.02799 5.61567 9.04648 5.61884 9.06445C5.62201 9.08242 5.63215 9.09841 5.64704 9.10896L8.33418 10.9909C8.34158 10.9961 8.34995 10.9998 8.35878 11.0017C8.36762 11.0037 8.37676 11.0039 8.38568 11.0023C8.3946 11.0008 8.40311 10.9974 8.41074 10.9926C8.41838 10.9877 8.42497 10.9814 8.43015 10.9739L8.8715 10.3427ZM7.74707 11.3809L7.33805 11.966C7.31752 11.9901 7.28313 11.9983 7.25439 11.9983L4.04686 11.9998C4.03672 11.9964 4.02752 11.9907 4.01998 11.9831C4.01244 11.9755 4.00677 11.9663 4.00343 11.9561C4.00009 11.9459 3.99917 11.9351 4.00075 11.9246C4.00232 11.914 4.00633 11.9039 4.01248 11.8951L5.48435 9.79665C5.48953 9.78922 5.49612 9.78289 5.50375 9.77802C5.51138 9.77314 5.5199 9.76982 5.52882 9.76825C5.53773 9.76667 5.54687 9.76688 5.55571 9.76885C5.56455 9.77081 5.57291 9.77451 5.58032 9.77972L7.73065 11.2855C7.76144 11.307 7.76862 11.3501 7.74707 11.3809Z"
+                fill="#00C3CC"
+              ></path>
+            </svg>
+          </div>
+          <span class="LImageHighlighter__text">Highlight</span>
+        </div>
+      </div>
+
+      <div class="L-ImageTooltip">
+        <div class="L-ImageTooltip__main">
+          <button class="L-ImageTooltip__delete">
+            <svg
+              width="18"
+              height="17"
+              viewBox="0 0 18 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3499 3.86991H12.3599C12.1299 2.19991 10.7099 0.909912 8.98989 0.909912C7.26989 0.909912 5.84989 2.20991 5.61989 3.86991H1.63989C1.22989 3.86991 0.889893 4.20991 0.889893 4.61991C0.889893 5.02991 1.22989 5.36991 1.63989 5.36991H2.23989V14.6899C2.23989 15.9399 3.24989 16.9499 4.50989 16.9499H13.5099C14.7599 16.9499 15.7799 15.9399 15.7799 14.6899V5.36991H16.3699C16.7799 5.36991 17.1199 5.02991 17.1199 4.61991C17.1199 4.20991 16.7699 3.86991 16.3499 3.86991ZM14.2599 14.6899C14.2599 15.1099 13.9199 15.4499 13.4899 15.4499H4.48989C4.06989 15.4499 3.71989 15.1099 3.71989 14.6899V5.40991H14.2499V14.6899H14.2599ZM8.98989 2.41991C9.88989 2.41991 10.6399 3.03991 10.8499 3.87991H7.12989C7.33989 3.03991 8.08989 2.41991 8.98989 2.41991Z"
+                fill="#50555C"
+              ></path>
+              <path
+                d="M5.59985 14.2898C6.00985 14.2898 6.34985 13.9498 6.34985 13.5398V7.32983C6.34985 6.91983 6.00985 6.57983 5.59985 6.57983C5.18985 6.57983 4.84985 6.91983 4.84985 7.32983V13.5398C4.84985 13.9498 5.18985 14.2898 5.59985 14.2898Z"
+                fill="#50555C"
+              ></path>
+              <path
+                d="M8.98999 14.2898C9.39999 14.2898 9.73999 13.9498 9.73999 13.5398V7.32983C9.73999 6.91983 9.39999 6.57983 8.98999 6.57983C8.57999 6.57983 8.23999 6.91983 8.23999 7.32983V13.5398C8.23999 13.9498 8.57999 14.2898 8.98999 14.2898Z"
+                fill="#50555C"
+              ></path>
+              <path
+                d="M12.3999 14.2898C12.8099 14.2898 13.1499 13.9498 13.1499 13.5398V7.32983C13.1499 6.91983 12.8099 6.57983 12.3999 6.57983C11.9899 6.57983 11.6499 6.91983 11.6499 7.32983V13.5398C11.6499 13.9498 11.9799 14.2898 12.3999 14.2898Z"
+                fill="#50555C"
+              ></path>
+            </svg>
+          </button>
+          <div class="L-ImageTooltip__color">
+            <button class="L-ImageTooltip__colorBtn">
+              <div class="L-ImageTooltip__colorParts">
+                <div class="L-ImageTooltip__colorPartItem L-First"></div>
+              </div>
+              <div class="L-ImageTooltip__colorArrow"></div>
+            </button>
+            <div class="L-ImageTooltip__colorDropdown L-Hidden">
+              <button class="L-ImageTooltip__colorSelect" data-slot-id="0">
+                <div class="L-ImageTooltip__colorSelectIcon L-Yellow"></div>
+                <div class="L-ImageTooltip__colorSelectText L-Yellow">
+                  Important
+                </div>
+              </button>
+              <button class="L-ImageTooltip__colorSelect" data-slot-id="1">
+                <div class="L-ImageTooltip__colorSelectIcon L-Mint"></div>
+                <div class="L-ImageTooltip__colorSelectText L-Mint">
+                  Important
+                </div>
+              </button>
+              <button class="L-ImageTooltip__colorSelect" data-slot-id="2">
+                <div class="L-ImageTooltip__colorSelectIcon L-Orange"></div>
+                <div class="L-ImageTooltip__colorSelectText L-Orange">
+                  Important
+                </div>
+              </button>
+              <button class="L-ImageTooltip__colorSelect" data-slot-id="3">
+                <div class="L-ImageTooltip__colorSelectIcon L-Purple"></div>
+                <div class="L-ImageTooltip__colorSelectText L-Purple">
+                  Important
+                </div>
+              </button>
+              <button class="L-ImageTooltip__colorSelect" data-slot-id="4">
+                <div class="L-ImageTooltip__colorSelectIcon L-Blue"></div>
+                <div class="L-ImageTooltip__colorSelectText L-Blue">
+                  Important
+                </div>
+              </button>
+              <button class="L-ImageTooltip__colorSelect" data-slot-id="5">
+                <div class="L-ImageTooltip__colorSelectIcon L-Pink"></div>
+                <div class="L-ImageTooltip__colorSelectText L-Pink">
+                  Important
+                </div>
+              </button>
+            </div>
+          </div>
+          <button class="L-ImageTooltip__thread">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.8099 2.01001C13.6399 2.01001 14.3099 2.68001 14.3099 3.51001V9.38001C14.3099 10.21 13.6399 10.88 12.8099 10.88H10.8999C10.3999 10.88 9.92994 11.13 9.64994 11.55L7.99994 14.04L6.34994 11.56C6.06994 11.14 5.59994 10.89 5.09994 10.89H3.18994C2.35994 10.89 1.68994 10.22 1.68994 9.39001V3.51001C1.68994 2.68001 2.35994 2.01001 3.18994 2.01001H12.8099ZM12.8099 0.51001H3.18994C1.52994 0.51001 0.189941 1.85001 0.189941 3.51001V9.38001C0.189941 11.04 1.52994 12.38 3.18994 12.38H5.09994L7.03994 15.29C7.26994 15.63 7.63994 15.81 8.00994 15.81C8.37994 15.81 8.74994 15.64 8.97994 15.29L10.9199 12.38H12.8299C14.4899 12.38 15.8299 11.04 15.8299 9.38001V3.51001C15.8099 1.85001 14.4699 0.51001 12.8099 0.51001Z"
+                fill="#50555C"
+              ></path>
+              <path
+                d="M4.86995 5.52002C4.35995 5.52002 3.94995 5.93002 3.94995 6.44002C3.94995 6.95002 4.35995 7.36002 4.86995 7.36002C5.37995 7.36002 5.78995 6.95002 5.78995 6.44002C5.78995 5.93002 5.37995 5.52002 4.86995 5.52002Z"
+                fill="#50555C"
+              ></path>
+              <path
+                d="M7.99983 5.52002C7.48983 5.52002 7.07983 5.93002 7.07983 6.44002C7.07983 6.95002 7.48983 7.36002 7.99983 7.36002C8.50983 7.36002 8.91983 6.95002 8.91983 6.44002C8.91983 5.93002 8.50983 5.52002 7.99983 5.52002Z"
+                fill="#50555C"
+              ></path>
+              <path
+                d="M11.12 5.52002C10.61 5.52002 10.2 5.93002 10.2 6.44002C10.2 6.95002 10.61 7.36002 11.12 7.36002C11.63 7.36002 12.04 6.95002 12.04 6.44002C12.04 5.93002 11.63 5.52002 11.12 5.52002Z"
+                fill="#50555C"
+              ></path>
+            </svg>
+          </button>
+          <div class="L-ImageTooltip__border"></div>
+          <div class="L-ImageTooltip__openState">
+            <button class="L-ImageTooltip__openStateBtn">
+              <div class="L-ImageTooltip__openStateIcon L-Public"></div>
+              <div class="L-ImageTooltip__openStateText">Public</div>
+              <div class="L-ImageTooltip__openStateArrow">
+                <div class="L-ImageTooltip__openStateArrowUp">
+                  <svg
+                    width="8"
+                    height="6"
+                    viewBox="0 0 8 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.40903 0.561797C4.20946 0.285268 3.79771 0.285268 3.59814 0.561798L0.245469 5.2074C0.00681998 5.53808 0.243107 6 0.650912 6H7.35626C7.76406 6 8.00035 5.53808 7.7617 5.2074L4.40903 0.561797Z"
+                      fill="#50555C"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="L-ImageTooltip__openStateArrowDown">
+                  <svg
+                    width="8"
+                    height="6"
+                    viewBox="0 0 8 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.40903 5.4382C4.20946 5.71473 3.79771 5.71473 3.59814 5.4382L0.245469 0.792603C0.00681998 0.461921 0.243107 0 0.650912 0H7.35626C7.76406 0 8.00035 0.461921 7.7617 0.792603L4.40903 5.4382Z"
+                      fill="#50555C"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <div class="L-ImageTooltip__openStateDropdown L-Hidden">
+              <button class="L-ImageTooltip__openStateSelect L-Public">
+                <div class="L-ImageTooltip__openStateSelectIcon L-Public"></div>
+                <div class="L-ImageTooltip__openStateSelectText L-Public">
+                  Public
+                </div>
+              </button>
+              <button class="L-ImageTooltip__openStateSelect L-OnlyMe">
+                <div class="L-ImageTooltip__openStateSelectIcon L-OnlyMe"></div>
+                <div class="L-ImageTooltip__openStateSelectText L-OnlyMe">
+                  Private
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="L-ImageTooltip__border"></div>
+          <a
+            href="https://getliner.com/my-highlights"
+            target="_blank"
+            class="L-ImageTooltip__home"
+          >
+            <div class="L-ImageTooltip__home--img"></div>
+            <span class="L-ImageTooltip__home--text">Home</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="L-ReadItLaterButtonController y_lb42u3h1_k"
+      style="top: 42.8281px; left: 8px; display: none"
+    >
+      <button class="L-ReadItLaterButton m_lb42u3h1_q">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12.3369 0.274543L8.3649 5.94687C8.35603 5.95941 8.34973 5.97358 8.34634 5.98857C8.34296 6.00355 8.34257 6.01906 8.34519 6.0342C8.34782 6.04933 8.3534 6.0638 8.36163 6.07678C8.36985 6.08975 8.38056 6.10098 8.39313 6.10981L14.9237 10.6825C14.9363 10.6914 14.9505 10.6977 14.9656 10.7011C14.9807 10.7045 14.9963 10.7049 15.0115 10.7022C15.0267 10.6995 15.0412 10.6938 15.0542 10.6855C15.0672 10.6771 15.0785 10.6663 15.0872 10.6536L18.8319 5.30558C19.5775 6.70538 20 8.30334 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C10.8047 0 11.5872 0.0950528 12.3369 0.274543ZM11.0894 12.9284L14.4605 11.4131C14.5214 11.3856 14.5291 11.3028 14.4746 11.2643L7.99988 6.73143C7.98744 6.7228 7.97294 6.7176 7.95785 6.71638C7.94275 6.71515 7.9276 6.71794 7.91393 6.72445C7.90026 6.73096 7.88855 6.74096 7.87998 6.75346C7.87142 6.76595 7.86631 6.78048 7.86517 6.79558L7.59445 10.481L7.03763 11.2662C7.02465 11.285 7.01959 11.3081 7.02355 11.3306C7.02752 11.353 7.04018 11.373 7.05879 11.3862L10.4177 13.7386C10.427 13.7451 10.4374 13.7497 10.4485 13.7522C10.4595 13.7546 10.471 13.7549 10.4821 13.7529C10.4932 13.751 10.5039 13.7468 10.5134 13.7407C10.523 13.7346 10.5312 13.7267 10.5377 13.7174L11.0894 12.9284ZM9.68384 14.2261L9.17256 14.9575C9.1469 14.9876 9.10392 14.9979 9.06799 14.9979L5.05858 14.9998C5.0459 14.9955 5.03439 14.9884 5.02497 14.9789C5.01554 14.9694 5.00846 14.9578 5.00429 14.9451C5.00012 14.9324 4.99897 14.9189 5.00093 14.9057C5.00289 14.8925 5.00792 14.8799 5.0156 14.8689L6.85544 12.2458C6.86191 12.2365 6.87015 12.2286 6.87969 12.2225C6.88923 12.2164 6.89988 12.2123 6.91102 12.2103C6.92217 12.2083 6.93359 12.2086 6.94464 12.2111C6.95569 12.2135 6.96614 12.2181 6.9754 12.2246L9.66331 14.1068C9.7018 14.1338 9.71078 14.1876 9.68384 14.2261Z"
+            fill="#00C3CC"
+          ></path>
+        </svg>
+
+        <span>Read it Later</span>
+      </button>
+      <button class="L-ReadItLaterEYRButton">
+        <svg
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_bd_147_801)">
+            <rect
+              x="12"
+              y="12"
+              width="32"
+              height="32"
+              rx="12"
+              fill="url(#paint0_linear_147_801)"
+            ></rect>
+          </g>
+          <g opacity="0.6">
+            <path
+              d="M34.3533 26.3875H29C28.5692 26.3875 28.2117 26.0392 28.2117 25.5992V20.2459C28.2117 19.815 28.56 19.4575 29 19.4575H34.3533C34.7842 19.4575 35.1417 19.8059 35.1417 20.2459V25.5992C35.1417 26.0392 34.7842 26.3875 34.3533 26.3875Z"
+              fill="white"
+            ></path>
+          </g>
+          <g opacity="0.6">
+            <path
+              d="M25.5351 35.215H20.1726C19.7418 35.215 19.3843 34.8667 19.3843 34.4267V29.0734C19.3843 28.6425 19.7326 28.285 20.1726 28.285H25.5259C25.9568 28.285 26.3143 28.6334 26.3143 29.0734V34.4267C26.3143 34.8575 25.9659 35.215 25.5351 35.215Z"
+              fill="white"
+            ></path>
+          </g>
+          <g opacity="0.8">
+            <path
+              d="M22.8584 26.6625C20.7959 26.6625 19.1184 24.985 19.1184 22.9225C19.1184 20.86 20.7959 19.1825 22.8584 19.1825C24.9209 19.1825 26.5984 20.86 26.5984 22.9225C26.5984 24.985 24.9209 26.6625 22.8584 26.6625Z"
+              fill="white"
+            ></path>
+          </g>
+          <path
+            d="M31.0808 30.1825C30.815 29.9167 30.375 29.9167 30.1091 30.1825C29.2475 31.0442 29.2475 32.4467 30.1091 33.3084C30.2466 33.4459 30.4208 33.51 30.595 33.51C30.7691 33.51 30.9433 33.4459 31.0808 33.3084C31.3466 33.0425 31.3466 32.6025 31.0808 32.3367C30.7508 32.0067 30.7508 31.4842 31.0808 31.1542C31.3558 30.8884 31.3558 30.4575 31.0808 30.1825Z"
+            fill="white"
+          ></path>
+          <path
+            d="M38.2768 35.9667L35.8751 33.565C36.5718 31.9333 36.2693 29.9717 34.9401 28.6425C34.0693 27.7717 32.9234 27.3317 31.7776 27.3317C30.6318 27.3317 29.4859 27.7717 28.6151 28.6425C26.8734 30.3842 26.8734 33.2167 28.6151 34.9675C29.4859 35.8383 30.6318 36.2783 31.7776 36.2783C32.3826 36.2783 32.9784 36.15 33.5376 35.9117L35.9393 38.3133C36.2051 38.5792 36.5626 38.7167 36.9109 38.7167C37.2593 38.7167 37.6168 38.5792 37.8826 38.3133L38.2768 37.9192C38.8084 37.3692 38.8084 36.5075 38.2768 35.9667ZM29.5868 33.9867C29.0001 33.4 28.6793 32.6208 28.6793 31.7958C28.6793 30.9708 29.0001 30.1917 29.5868 29.605C30.1734 29.0183 30.9526 28.6975 31.7776 28.6975C32.6026 28.6975 33.3818 29.0183 33.9684 29.605C34.5551 30.1917 34.8759 30.9708 34.8759 31.7958C34.8759 32.6208 34.5551 33.4 33.9684 33.9867C33.3818 34.5733 32.6026 34.8942 31.7776 34.8942C30.9434 34.8942 30.1643 34.5733 29.5868 33.9867ZM36.9109 37.3325L34.9676 35.3892L35.3618 34.995L37.3051 36.9383L36.9109 37.3325Z"
+            fill="white"
+          ></path>
+          <defs>
+            <filter
+              id="filter0_bd_147_801"
+              x="0"
+              y="0"
+              width="56"
+              height="56"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feGaussianBlur
+                in="BackgroundImageFix"
+                stdDeviation="4"
+              ></feGaussianBlur>
+              <feComposite
+                in2="SourceAlpha"
+                operator="in"
+                result="effect1_backgroundBlur_147_801"
+              ></feComposite>
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              ></feColorMatrix>
+              <feOffset></feOffset>
+              <feGaussianBlur stdDeviation="6"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="normal"
+                in2="effect1_backgroundBlur_147_801"
+                result="effect2_dropShadow_147_801"
+              ></feBlend>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect2_dropShadow_147_801"
+                result="shape"
+              ></feBlend>
+            </filter>
+            <linearGradient
+              id="paint0_linear_147_801"
+              x1="44"
+              y1="12"
+              x2="11.9583"
+              y2="12.0417"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#00C3CC"></stop>
+              <stop offset="1" stop-color="#438DFF"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </button>
+    </div>
+    <div class="liner-scroll-points-container"></div>
+  </body>
+</html>
