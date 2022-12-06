@@ -8,7 +8,7 @@
 - [x] Timestamp Microservice [Preview](https://boilerplate-project-timestamp.khalidmesbah1.repl.co)
 - [x] Request Header Parser Microservice [Preview](https://boilerplate-project-headerparser.khalidmesbah1.repl.co)
 - [x] URL Shortener Microservice [Preview](https://boilerplate-project-urlshortener.khalidmesbah1.repl.co)
-- [ ] Exercise Tracker [Preview]()
+- [x] Exercise Tracker [Preview](https://boilerplate-project-exercisetracker.khalidmesbah1.repl.co)
 - [x] File Metadata Microservice [Preview](https://boilerplate-project-filemetadata.khalidmesbah1.repl.co)
 
 ## Certification
